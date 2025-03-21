@@ -28,23 +28,25 @@
           <span class="text-4xl font-bold">Login</span>
           <div class="Email">
             <p>Your Username </p>
-            <input type="input" class="input validator w-full my-2" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*"
+            <input id="inputusername" type="input" class="input validator w-full my-2" required placeholder="Username" pattern="[A-Za-z][A-Za-z0-9\-]*"
               minlength="3" maxlength="30" title="Only letters, numbers or dash" />
           </div>
           <div class="password">
             <p class="">Your Password</p>
-            <input type="password" class="input validator w-full my-2 " required placeholder="Password" minlength="8"
+            <input id="inputpassword" type="password" class="input validator w-full my-2 " required placeholder="Password" minlength="8"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
           </div>
-          <button onclick="window.location.href='admin.html'" class="btn btn-soft btn-primary">login</button>
+          <button id="login" class="btn btn-soft btn-primary">login</button>
+          <!-- <button onclick="window.location.href='admin.html'" class="btn btn-soft btn-primary">admin</button> -->
         </div>
       </div>
     </div>
   </main>
 
 
-  <body></body>
+  <script src="./Scripts/loginandlogout.js"></script>
+  <script src="./Scripts/hello.js"></script>
 
 </body>
 

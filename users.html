@@ -1,18 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users Panel</title>
+    <title>Admin Panel</title>
     <link rel="icon" type="image/x-icon" href="Image/Logo.png">
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>This Is users Page</h1>
-    <button>Log out</button>
-    
+    <header></header>
+    <main class="flex">
+        <!-- sidebar/menu Section Start -->
+        <section class="sidebar bg-[#F3F3F3] h-screen  w-1/4 fixed">
+            <div class="">
+                <div class="logo">
+                    <div class=" bg-white m-6 p-3 rounded-xl flex gap-6">
+                        <img class="w-1/4" src="./Image/Logo.png" alt="">
+                        <h1 class="text-4xl font-poppins font-bold">DIRI Sufi
+                            Conselling
+                            center
+                        </h1>
+                    </div>
+                </div>
+                <div class="user bg-white px-7 py-4 ">
+                    <h3 class="username font-semibold text-3xl">userName</h3>
+                    <p>Phone: <span>01312456789</span></p>
+                </div>
+                <div class=" h-[580px] flex items-center ">
+                    <ul class=" bg-base-200 w-full font-bold text-2xl  pl-16  space-y-4">
+                        <li class="p-4 hover:bg-white hover:rounded-l-xl hover:w-full">
+                            <a>
+                                <i class="fa-solid fa-earth-americas "></i>
+                                <span class="ml-3">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="p-4 hover:bg-white hover:rounded-l-xl hover:w-full">
+                            <a>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <span class="ml-3">Write</span>
+                            </a>
+                        </li>
+
+                        <li class="p-4 hover:bg-white hover:rounded-l-xl hover:w-full">
+                            <a>
+                                <i class="fa-solid fa-book"></i>
+                                <span class="ml-3">All Foriyadi list</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="logut flex justify-center">
+                    <button onclick="window.location.href='index.html'" class="btn bg-red-700 border-none
+                    text-white w-[80%] text-xl mx-auto px-auto">logout</button>
+                </div>
+            </div>
+            <!--  -->
+
+        </section>
+        <!-- sidebar/menu Section End -->
+
+        <!-- main panel Section Start -->
+        <section class="w-3/4 absolute top-0 right-0 ">
+            <div class="deshboard  hidden">
+
+                <div class="table">
+                    <div class="overflow-x-auto m-16 ">
+                        <table class="table ">
+                            <!-- head -->
+                            <thead class="bg-[#1F3B45] text-white rounded-lg">
+                                <tr class="rounded-t-lg">
+                                    <th class="rounded-tl-xl">Name of Foriyadi</th>
+                                    <th>Problems</th>
+                                    <th>Family Member</th>
+                                    <th>Mobile Number</th>
+                                    <th class="rounded-tr-xl"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td>
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <div class="font-bold">Hart Hagerty</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Zemlak, Daniel and Leannon
+                                    </td>
+                                    <td>Purple</td>
+                                    <td>Purple</td>
+                                    <th>
+                                        <button class="btn  btn-xs bg-[#1F3B45] text-white ">details</button>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="write hidden">
+                <div class="startwriting  w-2/3 mx-auto  h-screen flex justify-center items-center">
+                    <div class="w-4/5" >
+                        <h1 class="font-bold text-4xl mb-8">Write A new Foriyadi</h1>
+                        <input type="text" placeholder="ফরিয়াদীর নাম" class="input  border-1 border-[#1F3B45] w-full mb-4" />
+                        <input type="text" placeholder="মোবাইল নাম্বার" class="input  border-1 border-[#1F3B45] w-full mb-4" />
+                        <select class="select   border-1 border-[#1F3B45] w-full mb-4">
+                            <option disabled selected>কি ফরিয়াদ নিয়ে দরবারে এসেছেন</option>
+                            <option>সন্তানের ফরিয়াদ</option>
+                            <option>ছেলে সন্তানের ফরিয়াদ</option>
+                            <option>মেয়ে/ছেলের বিয়ের ফরিয়াদ</option>
+                            <option>রোগ মুক্তির ফরিয়াদ</option>
+                            <option>আয় উন্নতির ফরিয়াদ</option>
+                            <option>অন্যান্য ফরিয়াদ</option>
+                          </select>
+
+                          <input type="number" class="input validator border-1 border-[#1F3B45] w-full mb-4" required placeholder="পরিবারের সদস্য সংখ্যা কত?" 
+                          min="1" max="10" title="Must be between be 1 to 10" />
+
+                        <div class="flex justify-center mt-8">
+                            <button class="btn bg-[#1F3B45] w-4/5 mb-4 p-4 rounded-xl text-white font-semibold">Get Full Details</button>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="All Foriyadi list">
+
+                <div class="table">
+                    <div class="overflow-x-auto m-16 ">
+                        <table class="table ">
+                            <!-- head -->
+                            <thead class="bg-[#1F3B45] text-white rounded-lg">
+                                <tr class="rounded-t-lg">
+                                    <th class="rounded-tl-xl">Name of Foriyadi</th>
+                                    <th>Problems</th>
+                                    <th>Family Member</th>
+                                    <th>Mobile Number</th>
+                                    <th class="rounded-tr-xl"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                    <td>
+                                        <div class="flex items-center gap-3">
+                                            <div>
+                                                <div class="font-bold">Hart Hagerty</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Zemlak, Daniel and Leannon
+                                    </td>
+                                    <td>Purple</td>
+                                    <td>Purple</td>
+                                    <th >
+                                        <button class="btn  btn-xs text-[#1F3B45] text-xl mr-3"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn  btn-xs text-[#1F3B45] text-xl mr-3"><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <button class="btn  btn-xs text-[#1F3B45] text-xl "><i class="fa-solid fa-print"></i></button>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <!-- main panel Section End -->
+
+    </main>
+    <footer></footer>
+
 </body>
+
 </html>
